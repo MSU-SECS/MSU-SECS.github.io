@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>MSU SECS CLUB</title>
+</head>
+<body>
+    <div class="header"><h1>SE CS CLUB</h1></div>
+    <div id="topbar">
+        <button class="c-button c-button--gooey selected" onclick="showSubpage('About')">About
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Projects')">Projects
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Leadership Team')">Leadership Team
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Upcoming Events')">Upcoming Events
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <button class="c-button c-button--gooey" onclick="showSubpage('Contact Us')">Contact Us
+            <div class="c-button__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+    </div>
+
+    <div id="About" class="subpage active">
+        <div class="image-container">
+            <img src="images/SECS_Logo_Transparent.png" alt="Main logo">
+        </div>
+
+        <div id="about-text">
+            <h1>Background</h1>
+            <p>We are a Michigan State Student organization dedicated to supporting the work of other student groups and nonprofit organizations by developing technical solutions to their difficult tasks.</p>
+        </div>
+    
+        <div id="image-section">
+            <img id="image" src="" alt="Image description">
+        </div>
+        <div id="text-section">
+            <p id="text"></p>
+        </div>
+        <div>
+            <h1>Timeline of the club:</h1>
+            <p>(click for more details)</p>
+            <div id="yearDiv" style="display: flex; justify-content: space-between;">
+                <span id="startYear">2023</span>
+                <span id="currentYear"></span>
+            </div>
+        </div>
+        <div id="timeline">
+            <!-- Timeline items will be added here by JavaScript -->
+        </div>
+    </div>
+    <div id="Contact Us" class="subpage">
+        <form id="contactForm">
+            <div id="nameRow">
+                <input class="contact-input short" type="text" id="firstName" placeholder="First Name" pattern="[^0-9]*" required>
+                <input class="contact-input short" type="text" id="lastName" placeholder="Last Name" pattern="[^0-9]*" required>
+            </div>
+            <input class="contact-input long" type="email" id="email" placeholder="Email" required>
+            <textarea class="contact-input long autoExpand" id="message" placeholder="Message" required></textarea>
+            <a href="#" class="contact-btn">Submit</a>
+        </form>
+    </div>
+    <div id="Projects" class="subpage">
+        <div class="container">
+            <h1>Our projects: past and present</h1>
+            <p>List of past projects</p>
+            <p>List of current projects</p>
+        </div>
+        </div>
+        <div id="Leadership Team" class="subpage">
+                <div class="image-container">
+                    <img src = "" alt = "Image of Leadership Team">
+                </div>
+                <div>
+                    <h1>Roles</h1>
+                    <p>Our current leadership roles include......</p>
+                    <p>Our current leadership team consists of.....</p>
+                </div>
+        </div>
+    <div id="Upcoming Events" class="subpage" style="justify-content: center;">
+
+    </div>
+
+    <div id="footer">
+        <h3>Conect with us on the socials</h3>
+        <div class="footer-links">
+            <a href="https://github.com/MSU-SECS" target="_blank"><img src="images/GitHub_Logo.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/company/msu-secs"><img src = "images/LinkedIn_Logo.png" alt="LinkedIn"></a>
+            <a href="https://discord.gg/g4seMPT6Ur"><img src = "images/Discord_Logo.png" alt="Discord"></a>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
